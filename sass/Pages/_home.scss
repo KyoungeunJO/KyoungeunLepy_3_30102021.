@@ -1,0 +1,103 @@
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(229,229,229);
+    box-shadow: inset 0px 12px 3px -10px rgb(177 177 177);
+}
+
+.location p {
+    padding: 15px 0;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 35px;
+    text-align: center;   
+    background: linear-gradient(rgb(244,244,244), rgb(231,231,231))
+}
+
+.instructions {
+    margin: 35px 15px;
+}
+
+.instructions h2 {
+    margin: 20px 0px;
+}
+
+.instructions div {
+    border: 1px white solid;
+    border-radius: 20px;
+    background-color: rgb(244,244,244);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 3px 3px rgb(229 229 229 / 30%), -0.3em 0 0.5em grey;
+    position: relative;
+    display: flex;
+}
+
+.instructions i{
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.instructions span {
+    background-color: $color-primary;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    position: absolute;
+    left: -13px;
+}
+
+.restaurants {
+    background-color: lightgrey;
+    padding: 20px;
+    margin: 30px 0px;
+}
+
+.restaurants article {
+    border-radius: 20px;
+    border: 0px white solid;
+    margin: 10px 0;
+    position: relative;
+}
+
+.new::before {
+    content: "Nouveau";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 40%);
+    border-radius: 5px;
+    padding: 7px;
+    font-weight: 600;
+}
+
+.restaurants img {
+    aspect-ratio: 8/4;
+    width: 100%;
+    object-fit: cover;
+    border: 0px white solid;
+    border-radius: 20px 20px 0 0;
+}
+
+.restaurants div {
+    background-color: white;
+    border: 0px white solid;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    color: black;
+}
+
+.restaurants a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
