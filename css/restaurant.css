@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Thin";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto-Medium";
+}
+
+header {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
+}
+
+footer h2 {
+  color: white;
+  font-family: "Shrikhand-Regular";
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  padding: 10px;
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0px white solid;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #d1d1d1;
+}
+
+/*# sourceMappingURL=restaurant.css.map */
