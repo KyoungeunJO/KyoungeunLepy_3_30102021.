@@ -17,3 +17,10 @@ footer a {
     color: white;
     font-family: "roboto-regular";
 }
+
+@media screen and (min-width: 1024px) {
+    footer {
+        flex-direction: row;
+        gap: 3.5rem;
+    }
+}

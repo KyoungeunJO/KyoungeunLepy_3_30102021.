@@ -1,6 +1,7 @@
 #lapalettedugout {
     width: 100%;
     aspect-ratio: 3/2;
+    object-fit: cover;
 }
 
 
@@ -49,6 +50,7 @@ section div {
     padding: 15px;
     gap: 0.2rem;
     box-shadow: -2px 8px 10px hsl(0deg 0% 0% / 8%);
+    min-width: 0;
 }
 
 .detail-meal{
@@ -89,4 +91,17 @@ h2 {
 
 section span {
     font-family: "roboto-medium";
+}
+
+@media screen and (min-width: 1024px) {
+    #lapalettedugout {
+        aspect-ratio: 5/2;
+    }
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section h2 {
+        grid-column: 1/-1;
+    }
 }
