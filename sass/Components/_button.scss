@@ -1,17 +1,18 @@
 .btn {
-    width: 60%;
     color: white;
     background: linear-gradient($color-secondary, $color-primary);
     border: 0px white solid;
     border-radius: 30px;
     box-shadow: 5px 5px 5px rgb(209,209,209);
     font-family: 'Roboto-Regular';
-    font-size: 1.1rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    transition: opacity 200ms ease;
 }
 
-.btn-large{
-    width: 80%;
+
+.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

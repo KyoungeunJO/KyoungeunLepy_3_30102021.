@@ -3,15 +3,17 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
 }
 
 footer h2 {
     color: white;
     font-family: 'Shrikhand-Regular';
+    margin-bottom: 1rem;
 }
 
 footer a {
     text-decoration: none;
     color: white;
+    font-family: "roboto-regular";
 }
