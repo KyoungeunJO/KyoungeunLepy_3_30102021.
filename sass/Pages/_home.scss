@@ -23,7 +23,7 @@
 }
 
 .instructions {
-    margin: 35px 15px;
+    margin: 3rem 1.2rem 3rem 1.6rem;
 }
 
 .instructions h2 {
@@ -31,15 +31,17 @@
 }
 
 .instructions div {
-    border: 1px white solid;
+    border: 1px $color-background solid;
     border-radius: 20px;
-    background-color: rgb(244,244,244);
+    background-color: $color-background;
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
-    box-shadow: 3px 3px rgb(229 229 229 / 30%), -0.3em 0 0.5em grey;
+    box-shadow: -2px 8px 10px hsl(0deg 0% 0% / 8%);
     position: relative;
     display: flex;
+    justify-content: center;
+    width: min(100%, 500px);
 }
 
 .instructions i{
@@ -47,17 +49,31 @@
     margin-left: 10px;
 }
 
+.instructions-step:hover {
+    background-color: rgb(243,232,254);
+}
+
+.instructions-step:hover i {
+    color: $color-primary;
+}
+
 .instructions span {
     background-color: $color-primary;
     color: white;
     border-radius: 50%;
-    padding: 5px 8px;
+    padding: 3px 7px;
     position: absolute;
     left: -13px;
+    font-family: 'Roboto-Regular';
+    font-size: 0.8rem;
+}
+
+.instructions p {
+    font-family: "Roboto-Regular";
 }
 
 .restaurants {
-    background-color: lightgrey;
+    background-color: $color-background;
     padding: 50px 20px;
     margin-top: 30px;
     display: flex;
@@ -98,24 +114,17 @@ main div {
     background-color: white;
     border: 0px white solid;
     border-radius: 0 0 20px 20px;
-    padding: 10px;
+    padding: 0.4rem;
     color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.2rem;
 }
 
 .card-text {
     flex-direction: column;
     align-items: flex-start;
-}
-
-.card-text h3 {    
-    font-size: clamp(1rem, 3vw + 0.5rem, 5rem);
-}
-
-.card-text p {
-    font-size: clamp(1rem, 2vw + 0.5rem, 4rem);
 }
 
 .restaurants a {
@@ -129,4 +138,23 @@ main div {
 .restaurants i {
     margin-right: 10px;
     font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .instructions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-self: center;
+    }
+    .restaurants h2{
+        grid-column: 1/-1;
+        justify-self: start;
+    }
 }
