@@ -246,6 +246,71 @@ main div {
   font-size: 1.5rem;
 }
 
+.restaurants span {
+  display: none;
+}
+
+.restaurants i:hover span {
+  display: inline;
+  color: linear-gradient(#FF79DA, #9356DC);
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
+.loader-animation {
+  display: block;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear infinite;
+}
+
+.loader-animation::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FF79DA;
+  animation: spin 3s linear infinite;
+}
+
+.loader-animation::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #99E2D0;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media screen and (min-width: 768px) {
   .instructions {
     display: flex;
