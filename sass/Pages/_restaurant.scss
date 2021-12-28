@@ -95,6 +95,23 @@ section span {
     font-family: "roboto-medium";
 }
 
+@keyframes sliding_up {
+    from {
+        transform: translateY(40px);
+        opacity: .10;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@for $i from 1 to 9 {
+    .item#{$i} {
+        animation: sliding_up 800ms $anim-delay*$i ease-out forwards;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     #lapalettedugout {
         aspect-ratio: 5/2;
@@ -105,5 +122,15 @@ section span {
     }
     section h2 {
         grid-column: 1/-1;
+    }
+
+    .entrees {
+        animation: sliding_up 800ms 0ms ease-out forwards;
+    }
+    .plats {
+        animation: sliding_up 800ms 100ms ease-out forwards;
+    }
+    .desserts {
+        animation: sliding_up 800ms 200ms ease-out forwards;
     }
 }
