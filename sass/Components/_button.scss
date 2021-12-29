@@ -3,16 +3,18 @@
     background: linear-gradient($color-secondary, $color-primary);
     border: 0px white solid;
     border-radius: 30px;
-    box-shadow: 5px 5px 5px rgb(209,209,209);
+    box-shadow: 2px 2px 2px rgb(209,209,209);
     font-family: 'Roboto-Regular';
     padding: 1rem 2rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    transition: opacity 200ms ease;
+    transition: all 250ms ease;
 }
 
 
 .btn:hover {
-    opacity: 0.8;
+    opacity: 0.85;
     cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 4px 4px 4px rgb(209,209,209);
 }

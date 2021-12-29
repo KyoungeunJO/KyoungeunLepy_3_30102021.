@@ -64,14 +64,16 @@ footer {
   background-color: #282828;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
   padding: 1.5rem;
+  font-size: 1.3rem;
 }
 
-footer h2 {
+footer > h2 {
   color: white;
   font-family: "Shrikhand-Regular";
-  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 footer a {
@@ -84,6 +86,7 @@ footer a {
   footer {
     flex-direction: row;
     gap: 3.5rem;
+    font-size: 1.3rem;
   }
 }
 .btn {
@@ -91,17 +94,19 @@ footer a {
   background: linear-gradient(#FF79DA, #9356DC);
   border: 0px white solid;
   border-radius: 30px;
-  box-shadow: 5px 5px 5px #d1d1d1;
+  box-shadow: 2px 2px 2px #d1d1d1;
   font-family: "Roboto-Regular";
   padding: 1rem 2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  transition: opacity 200ms ease;
+  transition: all 250ms ease;
 }
 
 .btn:hover {
-  opacity: 0.8;
+  opacity: 0.85;
   cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 4px 4px 4px #d1d1d1;
 }
 
 #lapalettedugout {
@@ -135,9 +140,30 @@ h1 {
   font-size: 1.7em;
 }
 
-#title i {
-  align-self: center;
+.heart {
   font-size: 1.3rem;
+  position: relative;
+}
+
+.empty-heart {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+.full-heart {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: all 400ms;
+}
+
+.heart:hover .full-heart {
+  transform: scale(1.2);
 }
 
 section {

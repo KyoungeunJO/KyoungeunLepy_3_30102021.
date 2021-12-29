@@ -138,19 +138,35 @@ main div {
     aspect-ratio: 3/2;
 }
 
-.restaurants i {
+.heart {
     margin-right: 10px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    position: relative;
+    height: 65%;
+    width: 30px;
 }
 
-.restaurants span {
-    display: none;
+.empty-heart{
+    position: absolute;
+    right: 2px;
+    top: 25%;
 }
 
-.restaurants i:hover span{
-    display: inline;
-    color: linear-gradient($color-secondary, $color-primary);
+.full-heart {
+    position: absolute;
+    right: 2px;
+    top: 25%;
+    background: linear-gradient($color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: scale(0);
+    transition: all 400ms;
 }
+
+.heart:hover .full-heart {
+    transform: scale(1.1);
+}
+
 
 @media screen and (min-width: 768px) {
     .instructions{

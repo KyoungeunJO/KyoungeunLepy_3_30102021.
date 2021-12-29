@@ -2,14 +2,16 @@ footer {
     background-color: rgb(40 40 40);
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
     padding: 1.5rem;
+    font-size: 1.3rem;
 }
 
-footer h2 {
+footer > h2 {
     color: white;
     font-family: 'Shrikhand-Regular';
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
 footer a {
@@ -22,5 +24,6 @@ footer a {
     footer {
         flex-direction: row;
         gap: 3.5rem;
+        font-size: 1.3rem;
     }
 }
