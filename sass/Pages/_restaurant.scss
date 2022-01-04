@@ -70,7 +70,6 @@ section div {
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
-    padding: 15px;
     gap: 0.2rem;
     box-shadow: -2px 8px 10px hsl(0deg 0% 0% / 8%);
     min-width: 0;
@@ -83,6 +82,7 @@ section div {
     min-width: 0;
     box-shadow: none;
     flex-grow: 1;
+    padding: 15px;
 }
 
 section div > p {
@@ -97,6 +97,7 @@ section span {
     display: block;
     width: 10%;
     font-family: "roboto-medium";
+    padding: 15px;
 }
 
 .title-border::after {
@@ -112,10 +113,6 @@ h2 {
     font-family: "roboto-regular";
 }
 
-section span {
-    font-family: "roboto-medium";
-}
-
 @keyframes sliding_up {
     from {
         transform: translateY(40px);
@@ -127,11 +124,47 @@ section span {
     }
 }
 
+.item::before {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+font-size: 2rem;
+position: absolute;
+right: -80px;
+top: 25%;
+content: "\f058";
+color: white;
+transition: right 450ms;
+}
+
+.item {
+    overflow: hidden;
+}
+
+.item::after {
+    content: "";
+    width: 80px;
+    background-color: turquoise;
+    transition: all 450ms;
+    border-radius: 0 15px 15px 0;
+    margin-right: -80px;
+}
+
+.item:hover::after {
+    margin-right: 0;
+}
+
+.item:hover::before {
+    right: 24px;
+    transform: rotate(720deg);
+    transition: transform 450ms;
+}
+
 @for $i from 1 to 9 {
     .item#{$i} {
         animation: sliding_up 800ms $anim-delay*$i ease-out forwards;
     }
 }
+
 
 @media screen and (min-width: 1024px) {
     #lapalettedugout {

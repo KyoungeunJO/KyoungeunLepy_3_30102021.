@@ -181,7 +181,7 @@ footer a {
 .btn:hover {
   opacity: 0.85;
   cursor: pointer;
-  transform: scale(1.02);
+  transform: perspective(500px) translateZ(10px);
   box-shadow: 4px 4px 4px #d1d1d1;
 }
 
