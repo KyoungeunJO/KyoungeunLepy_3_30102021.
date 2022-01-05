@@ -1,6 +1,6 @@
 @import "../Components/button";
 
-#lapalettedugout {
+#main-img {
     width: 100%;
     aspect-ratio: 3/2;
     object-fit: cover;
@@ -159,7 +159,7 @@ transition: right 450ms;
     transition: transform 450ms;
 }
 
-@for $i from 1 to 10 {
+@for $i from 1 to 11 {
     .item#{$i} {
         animation: sliding_up 800ms $anim-delay*$i ease-out forwards;
     }
@@ -167,7 +167,7 @@ transition: right 450ms;
 
 
 @media screen and (min-width: 1024px) {
-    #lapalettedugout {
+    #main-img {
         aspect-ratio: 5/2;
     }
     section {

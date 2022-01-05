@@ -109,7 +109,7 @@ footer a {
   box-shadow: 4px 4px 4px #d1d1d1;
 }
 
-#lapalettedugout {
+#main-img {
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
@@ -302,8 +302,12 @@ h2 {
   animation: sliding_up 800ms 450ms ease-out forwards;
 }
 
+.item10 {
+  animation: sliding_up 800ms 500ms ease-out forwards;
+}
+
 @media screen and (min-width: 1024px) {
-  #lapalettedugout {
+  #main-img {
     aspect-ratio: 5/2;
   }
 
