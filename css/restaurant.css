@@ -298,6 +298,10 @@ h2 {
   animation: sliding_up 800ms 400ms ease-out forwards;
 }
 
+.item9 {
+  animation: sliding_up 800ms 450ms ease-out forwards;
+}
+
 @media screen and (min-width: 1024px) {
   #lapalettedugout {
     aspect-ratio: 5/2;

@@ -159,7 +159,7 @@ transition: right 450ms;
     transition: transform 450ms;
 }
 
-@for $i from 1 to 9 {
+@for $i from 1 to 10 {
     .item#{$i} {
         animation: sliding_up 800ms $anim-delay*$i ease-out forwards;
     }
