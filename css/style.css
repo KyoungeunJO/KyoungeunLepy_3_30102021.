@@ -231,11 +231,14 @@ footer i {
 }
 
 .instructions {
-  margin: 3rem 1.2rem 3rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .instructions h2 {
-  margin: 20px 0px;
+  margin: 20px;
+  align-self: start;
 }
 
 .instructions-step {
@@ -378,12 +381,6 @@ main div {
 }
 
 @media screen and (min-width: 768px) {
-  .instructions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr;
