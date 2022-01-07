@@ -2,7 +2,6 @@ footer {
     background-color: rgb(40 40 40);
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0.5rem;
     padding: 1.5rem;
     font-size: 1.3rem;
@@ -20,10 +19,29 @@ footer a {
     font-family: "roboto-regular";
 }
 
-@media screen and (min-width: 1024px) {
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+footer i{
+    margin-right: 10px;
+    font-size: 1rem;
+    width: 1rem;
+}
+
+.fa-hands-helping {
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
     footer {
         flex-direction: row;
-        gap: 3.5rem;
-        font-size: 1.3rem;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+    footer p {
+        font-size: 1rem;
     }
 }

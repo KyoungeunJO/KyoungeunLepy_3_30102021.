@@ -33,7 +33,7 @@
     margin: 20px 0px;
 }
 
-.instructions div {
+.instructions-step {
     border: 1px $color-background solid;
     border-radius: 20px;
     background-color: $color-background;
@@ -43,7 +43,6 @@
     box-shadow: -2px 8px 10px hsl(0deg 0% 0% / 8%);
     position: relative;
     display: flex;
-    justify-content: center;
     width: min(100%, 500px);
 }
 
@@ -69,6 +68,11 @@
     left: -13px;
     font-family: 'Roboto-Regular';
     font-size: 0.8rem;
+}
+
+.instructions-text{
+    display: flex;
+    align-items: center;
 }
 
 .instructions p {

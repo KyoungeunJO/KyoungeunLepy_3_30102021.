@@ -1,1 +1,397 @@
-@font-face{font-family:"Shrikhand-Regular";src:url("../fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"Roboto-Thin";src:url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"Roboto-Regular";src:url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");font-weight:normal;font-style:normal}@font-face{font-family:"Roboto-Medium";src:url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");font-weight:normal;font-style:normal}*{margin:0;padding:0;box-sizing:border-box;font-family:"Roboto-Thin";font-size:clamp(1rem,.5vw + .5rem,5rem)}h1,h2,h3,h4,h5,h6{font-family:"Roboto-Medium"}h2{font-size:1.6em}header{text-align:center;padding-top:20px;padding-bottom:10px;display:grid;grid-template-columns:repeat(3, 1fr);align-items:center}#return-arrow{justify-self:start;margin-left:15px;font-size:1.4rem;color:#000}#logo{margin-left:auto;margin-right:auto;grid-column:2}footer{background-color:#282828;display:flex;flex-direction:column;align-items:center;gap:.5rem;padding:1.5rem;font-size:1.3rem}footer>h2{color:#fff;font-family:"Shrikhand-Regular";font-size:1.3rem}footer a{text-decoration:none;color:#fff;font-family:"roboto-regular"}@media screen and (min-width: 1024px){footer{flex-direction:row;gap:3.5rem;font-size:1.3rem}}.loader{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;position:fixed;z-index:100;background-color:rgba(100,100,100,.4);animation:hide 3s cubic-bezier(1, 0.01, 1, 0.13) forwards}@keyframes hide{from{opacity:1}to{opacity:0;z-index:-100}}.loader-animation{display:block;position:relative;width:10vw;aspect-ratio:1/1;border-radius:50%;border:8px solid transparent;border-top-color:#9356dc;animation:spin 3s linear forwards}.loader-animation::before{content:"";position:absolute;top:10px;bottom:10px;left:10px;right:10px;border-radius:50%;border:8px solid transparent;border-top-color:#ff79da;transform:rotate(45deg);animation:spin 2s linear forwards}.loader-animation::after{content:"";position:absolute;top:30px;bottom:30px;left:30px;right:30px;border-radius:50%;border:8px solid transparent;border-right-color:#99e2d0;animation:spin 2.5s linear forwards}@keyframes spin{0%{transform:rotate(0deg);opacity:1}60%{opacity:1}90%{opacity:0}100%{transform:rotate(360deg);opacity:0}}.btn{color:#fff;background:linear-gradient(#FF79DA, #9356DC);border:0px #fff solid;border-radius:30px;box-shadow:2px 2px 2px #d1d1d1;font-family:"Roboto-Regular";padding:1rem 2rem;margin-top:1rem;margin-bottom:2rem;transition:all 250ms ease}.btn:hover{opacity:.85;cursor:pointer;transform:perspective(500px) translateZ(10px);box-shadow:4px 4px 4px #d1d1d1}.location{display:flex;align-items:center;justify-content:center;gap:10px;background-color:#e5e5e5;box-shadow:inset 0px 12px 3px -10px #b1b1b1}.location p{padding:15px 0;font-family:"Roboto-Regular"}.jumbotron{display:flex;flex-direction:column;align-items:center;gap:20px;padding:35px;text-align:center;background:linear-gradient(#f4f4f4, #e7e7e7)}.instructions{margin:3rem 1.2rem 3rem 1.6rem}.instructions h2{margin:20px 0px}.instructions div{border:1px #f4f4f4 solid;border-radius:20px;background-color:#f4f4f4;padding:20px;margin-bottom:20px;text-align:center;box-shadow:-2px 8px 10px rgba(0,0,0,.08);position:relative;display:flex;justify-content:center;width:min(100%,500px)}.instructions i{margin-right:20px;margin-left:10px}.instructions-step:hover{background-color:#f3e8fe}.instructions-step:hover i{color:#9356dc}.instructions span{background-color:#9356dc;color:#fff;border-radius:50%;padding:3px 7px;position:absolute;left:-13px;font-family:"Roboto-Regular";font-size:.8rem}.instructions p{font-family:"Roboto-Regular"}.restaurants{background-color:#f4f4f4;padding:50px 20px;margin-top:30px;display:flex;flex-direction:column;gap:2rem}.restaurants article{border-radius:20px;border:0px #fff solid;position:relative;width:100%;aspect-ratio:3/2}.new::before{content:"Nouveau";position:absolute;top:10px;right:10px;background-color:#99e2d0;color:#278870;border-radius:5px;padding:5px 10px;font-family:"Roboto-Regular"}.restaurants img{aspect-ratio:8/4;width:100%;object-fit:cover;border:0px #fff solid;border-radius:20px 20px 0 0;height:70%}main div{background-color:#fff;border:0px #fff solid;border-radius:0 0 20px 20px;padding:.4rem;color:#000;display:flex;justify-content:space-between;align-items:center;gap:.2rem}.card-text{flex-direction:column;align-items:flex-start}.restaurants a{text-decoration:none;display:flex;flex-direction:column;width:100%;aspect-ratio:3/2}.heart{margin-right:10px;font-size:1.3rem;position:relative;height:65%;width:30px}.empty-heart{position:absolute;right:2px;top:25%}.full-heart{position:absolute;right:2px;top:25%;background:linear-gradient(#9356DC, #FF79DA);-webkit-background-clip:text;color:transparent;transform:scale(0);transition:all 400ms}.heart:hover .full-heart{transform:scale(1.1)}@media screen and (min-width: 768px){.instructions{display:flex;flex-direction:column;align-items:center}.restaurants{display:grid;grid-template-columns:1fr 1fr;align-items:center;justify-self:center}.restaurants h2{grid-column:1/-1;justify-self:start}}/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Shrikhand-Regular";
+  src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto-Thin";
+  font-size: clamp(1rem, 0.5vw + 0.5rem, 5rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto-Medium";
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+header {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+#return-arrow {
+  justify-self: start;
+  margin-left: 15px;
+  font-size: 1.4rem;
+  color: black;
+}
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 2;
+}
+
+footer {
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+}
+
+footer > h2 {
+  color: white;
+  font-family: "Shrikhand-Regular";
+  font-size: 1.3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-family: "roboto-regular";
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+}
+
+footer i {
+  margin-right: 10px;
+  font-size: 1rem;
+  width: 1rem;
+}
+
+.fa-hands-helping {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
+}
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  background-color: rgba(100, 100, 100, 0.4);
+  animation: hide 3s cubic-bezier(1, 0.01, 1, 0.13) forwards;
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+.loader-animation {
+  display: block;
+  position: relative;
+  width: 10vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 3s linear forwards;
+}
+
+.loader-animation::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-top-color: #FF79DA;
+  transform: rotate(45deg);
+  animation: spin 2s linear forwards;
+}
+
+.loader-animation::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  border-right-color: #99E2D0;
+  animation: spin 2.5s linear forwards;
+  /*transform: rotate(90deg);*/
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.btn {
+  color: white;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0px white solid;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px #d1d1d1;
+  font-family: "Roboto-Regular";
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  transition: all 250ms ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+  cursor: pointer;
+  transform: perspective(500px) translateZ(10px);
+  box-shadow: 4px 4px 4px #d1d1d1;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #e5e5e5;
+  box-shadow: inset 0px 12px 3px -10px #b1b1b1;
+}
+
+.location p {
+  padding: 15px 0;
+  font-family: "Roboto-Regular";
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 35px;
+  text-align: center;
+  background: linear-gradient(#f4f4f4, #e7e7e7);
+}
+
+.instructions {
+  margin: 3rem 1.2rem 3rem 1.6rem;
+}
+
+.instructions h2 {
+  margin: 20px 0px;
+}
+
+.instructions-step {
+  border: 1px #f4f4f4 solid;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: -2px 8px 10px rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: flex;
+  width: min(100%, 500px);
+}
+
+.instructions i {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.instructions-step:hover {
+  background-color: #f3e8fe;
+}
+
+.instructions-step:hover i {
+  color: #9356DC;
+}
+
+.instructions span {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  position: absolute;
+  left: -13px;
+  font-family: "Roboto-Regular";
+  font-size: 0.8rem;
+}
+
+.instructions-text {
+  display: flex;
+  align-items: center;
+}
+
+.instructions p {
+  font-family: "Roboto-Regular";
+}
+
+.restaurants {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.restaurants article {
+  border-radius: 20px;
+  border: 0px white solid;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.new::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  color: #278870;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: "Roboto-Regular";
+}
+
+.restaurants img {
+  aspect-ratio: 8/4;
+  width: 100%;
+  object-fit: cover;
+  border: 0px white solid;
+  border-radius: 20px 20px 0 0;
+  height: 70%;
+}
+
+main div {
+  background-color: white;
+  border: 0px white solid;
+  border-radius: 0 0 20px 20px;
+  padding: 0.4rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.card-text {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.restaurants a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.heart {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  position: relative;
+  height: 65%;
+  width: 30px;
+}
+
+.empty-heart {
+  position: absolute;
+  right: 2px;
+  top: 25%;
+}
+
+.full-heart {
+  position: absolute;
+  right: 2px;
+  top: 25%;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(0);
+  transition: all 400ms;
+}
+
+.heart:hover .full-heart {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .restaurants h2 {
+    grid-column: 1/-1;
+    justify-self: start;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
