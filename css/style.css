@@ -256,6 +256,7 @@ footer i {
 
 .instructions-step:hover {
   background-color: #f3e8fe;
+  cursor: pointer;
 }
 
 .instructions-step:hover i {

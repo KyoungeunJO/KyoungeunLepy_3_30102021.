@@ -183,6 +183,7 @@ h1 {
 
 .heart:hover .full-heart {
   transform: scale(1.2);
+  cursor: pointer;
 }
 
 section {
@@ -278,12 +279,14 @@ h2 {
 
 .item:hover::after {
   margin-right: 0;
+  cursor: pointer;
 }
 
 .item:hover::before {
   right: 24px;
   transform: rotate(720deg);
   transition: transform 450ms;
+  cursor: pointer;
 }
 
 .item1 {
