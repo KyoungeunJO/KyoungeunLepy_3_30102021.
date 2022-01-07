@@ -247,7 +247,7 @@ footer i {
   box-shadow: -2px 8px 10px rgba(0, 0, 0, 0.08);
   position: relative;
   display: flex;
-  width: min(100%, 500px);
+  width: min(100%, 300px);
 }
 
 .instructions i {
