@@ -61,19 +61,10 @@
 }
 
 @keyframes spin {
-    0%{
+    from{
         transform: rotate(0deg);
-        opacity: 1;
     }
-
-    60% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 0;
-    }
-    100%{
+    to{
         transform: rotate(360deg);
-        opacity: 0;
     }
 }
