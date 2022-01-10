@@ -101,25 +101,40 @@ h2 {
     }
 }
 
+.item {
+    overflow: hidden;
+}
+
 .item::before {
 font-family: "Font Awesome 5 Free";
 font-weight: 900;
 font-size: 2rem;
 position: absolute;
 right: -80px;
-top: 25%;
+display: flex;
+justify-content: center;
+align-items: center;
+top: 0;
+bottom: 0;
+height: 50%;
+margin: auto;
 content: "\f058";
 color: white;
 transition: right 450ms;
 }
 
-.item {
-    overflow: hidden;
+.item:hover::before {
+    right: 24px;
+    transform: rotate(720deg);
+    transform-origin: center;
+    transition: transform 450ms;
+    cursor: pointer;
 }
 
 .item::after {
     content: "";
     width: 80px;
+    min-width: 80px;
     background-color: turquoise;
     transition: all 450ms;
     border-radius: 0 15px 15px 0;
@@ -128,13 +143,6 @@ transition: right 450ms;
 
 .item:hover::after {
     margin-right: 0;
-    cursor: pointer;
-}
-
-.item:hover::before {
-    right: 24px;
-    transform: rotate(720deg);
-    transition: transform 450ms;
     cursor: pointer;
 }
 
