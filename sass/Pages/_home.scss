@@ -1,5 +1,6 @@
 @import "../Components/spinner";
 @import "../Components/button";
+@import "../Components/heart";
 
 .location {
     display: flex;
@@ -146,36 +147,6 @@ main div {
     width: 100%;
     aspect-ratio: 3/2;
 }
-
-.heart {
-    margin-right: 10px;
-    font-size: 1.3rem;
-    position: relative;
-    height: 65%;
-    width: 30px;
-}
-
-.empty-heart{
-    position: absolute;
-    right: 2px;
-    top: 25%;
-}
-
-.full-heart {
-    position: absolute;
-    right: 2px;
-    top: 25%;
-    background: linear-gradient($color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    color: transparent;
-    transform: scale(0);
-    transition: all 400ms;
-}
-
-.heart:hover .full-heart {
-    transform: scale(1.1);
-}
-
 
 @media screen and (min-width: 768px) {
     .restaurants {

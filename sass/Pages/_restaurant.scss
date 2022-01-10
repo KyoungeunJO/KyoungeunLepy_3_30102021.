@@ -1,4 +1,5 @@
 @import "../Components/button";
+@import "../Components/heart";
 
 #main-img {
     width: 100%;
@@ -32,32 +33,6 @@ h1 {
     font-size: 1.7em;
 }
 
-.heart {
-    font-size: 1.3rem;
-    position: relative;
-}
-
-.empty-heart{
-    position: absolute;
-    right: 15px;
-    top: 10px;
-}
-
-.full-heart {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    background: linear-gradient($color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    color: transparent;
-    transform: scale(0);
-    transition: all 400ms;
-}
-
-.heart:hover .full-heart {
-    transform: scale(1.2);
-    cursor: pointer;
-}
 
 section {
     display: flex;
