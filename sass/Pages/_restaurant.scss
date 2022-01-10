@@ -61,7 +61,7 @@ section div {
     padding: 15px;
 }
 
-section div > p {
+section div > p, h3 {
     width: 90%;
     text-overflow: ellipsis;
     white-space: nowrap;
