@@ -2,6 +2,10 @@
 @import "../Components/button";
 @import "../Components/heart";
 
+h1 {
+    font-size: 1.6rem;
+}
+
 .location {
     display: flex;
     align-items: center;
